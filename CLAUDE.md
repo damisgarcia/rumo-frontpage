@@ -18,13 +18,15 @@ Site institucional/frontpage da **rumo.com.br**, construído com Nuxt 4. Usa `@n
 | Conteúdo | `@nuxt/content ^3.12.0` |
 | Fontes | `@nuxt/fonts 0.14.0` |
 | Ícones | `@nuxt/icon 2.2.1` |
-| Estilos | `@nuxtjs/tailwindcss` (Tailwind v3) — *instalação pendente* |
+| Estilos | `@nuxtjs/tailwindcss` (Tailwind v3) |
+| Componentes UI | `shadcn-nuxt` (shadcn/ui para Nuxt) — *instalação pendente* |
 | State | `@pinia/nuxt` — *instalação pendente* |
 | Scripts | `@nuxt/scripts` — *instalação pendente* |
 | DB | `better-sqlite3 ^12.6.2` |
 | Package manager | **bun** (sempre use bun, nunca npm ou yarn) |
 
 > Os módulos marcados como "instalação pendente" foram planejados em `docs/plans/2026-03-07-basic-modules-setup.md` e ainda não foram executados.
+> `@nuxtjs/tailwindcss` foi instalado em 2026-03-08.
 
 ---
 
@@ -44,8 +46,8 @@ frontpage/
 │   └── about.md              # Página sobre
 ├── content.config.ts         # Coleção de conteúdo (type: page, source: **)
 ├── nuxt.config.ts            # Configuração principal do Nuxt
-├── tailwind.config.ts        # (a criar) Configuração do Tailwind
-├── assets/css/main.css       # (a criar) Diretivas Tailwind
+├── tailwind.config.ts        # Configuração do Tailwind (dark mode, tokens)
+├── app/assets/css/main.css   # Diretivas Tailwind + tipografia base (@layer base)
 ├── docs/plans/               # Planos de implementação
 └── CLAUDE.md                 # Este arquivo
 ```
@@ -72,6 +74,21 @@ frontpage/
 - Conteúdo Markdown em `content/`
 - Planos de implementação em `docs/plans/YYYY-MM-DD-<feature>.md`
 
+### Estilização de Componentes
+
+1. **Verificar shadcn/nuxt primeiro** — antes de criar um componente do zero, verifique se ele existe no `shadcn-nuxt`. Se existir, instale-o e customize para seguir o Figma.
+   - Ref: https://www.shadcn-vue.com/docs/installation/nuxt
+   - Componentes ficam em `app/components/ui/`
+
+2. **Padrão BEM com `@apply`** — ao customizar componentes (shadcn ou próprios), use BEM para nomenclatura de classes e `@apply` do Tailwind para aplicar os estilos:
+   ```css
+   /* BEM: bloco__elemento--modificador */
+   .card { @apply bg-page-bg border border-page-border; }
+   .card__title { @apply font-tight font-semibold text-text-primary; }
+   .card__title--hero { @apply text-4xl; }
+   .card__body { @apply font-sans text-sm text-text-body; }
+   ```
+
 ---
 
 ## Histórico de Decisões
@@ -81,3 +98,6 @@ frontpage/
 | 2026-03-07 | Escolhido `@nuxtjs/tailwindcss` (Tailwind v3) em vez de Tailwind v4 direto |
 | 2026-03-07 | `@pinia/nuxt` para state management (auto-imports habilitados) |
 | 2026-03-07 | `@nuxt/scripts` para gerenciamento de scripts de terceiros |
+| 2026-03-08 | `@nuxtjs/tailwindcss` instalado; dark mode via `class`; fontes Inter, Inter Tight, JetBrains Mono |
+| 2026-03-08 | Padrão BEM + `@apply` para estilização de componentes |
+| 2026-03-08 | `shadcn-nuxt` adotado como biblioteca base de componentes UI |
