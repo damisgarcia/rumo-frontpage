@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply bg-page-bg text-text-body;
+  }
+
+  body {
+    @apply bg-page-bg font-sans text-text-body;
+  }
+
+  /* Headings — Inter Tight SemiBold */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-tight font-semibold text-text-primary leading-tight tracking-tight;
+  }
+
+  h1 { @apply text-4xl; }  /* 40px — hero */
+  h2 { @apply text-3xl; }  /* 32px */
+  h3 { @apply text-2xl; }  /* 24px */
+  h4 { @apply text-xl; }   /* 20px */
+  h5 { @apply text-lg; }   /* 18px */
+  h6 { @apply text-base; } /* 16px */
+
+  /* Parágrafo — Inter Regular */
+  p {
+    @apply font-sans font-normal text-sm text-text-body leading-[1.4];
+  }
+
+  /* Texto pequeno */
+  small {
+    @apply font-sans font-normal text-xs text-text-muted;
+  }
+
+  /* Destaque */
+  strong, b {
+    @apply font-semibold text-text-primary;
+  }
+
+  /* Monospace: datas, captions, legends */
+  time,
+  [datetime] {
+    @apply font-mono font-normal text-xs text-text-muted tracking-[0.12px];
+  }
+
+  caption {
+    @apply font-mono font-normal text-xs text-text-muted tracking-[0.12px];
+  }
+
+  legend {
+    @apply font-mono font-normal text-xs text-text-muted tracking-[0.12px];
+  }
+}
