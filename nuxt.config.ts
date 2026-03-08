@@ -3,4 +3,7 @@ export default defineNuxtConfig({
   modules: ['@nuxt/content', '@nuxt/fonts', '@nuxt/icon'],
   devtools: { enabled: true },
   compatibilityDate: '2024-04-03',
+  devServer: {
+    port: 8000,
+  },
 })
