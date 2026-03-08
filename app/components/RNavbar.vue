@@ -22,9 +22,9 @@
           <li><a href="#planos" class="r-navbar__link">Ver Planos</a></li>
         </ul>
 
-        <button class="r-navbar__cta">
+        <Button variant="cta">
           Solicitar demonstração
-        </button>
+        </Button>
       </div>
     </div>
   </nav>
@@ -68,15 +68,5 @@
   @apply font-sans font-normal text-[12px] text-[#7d7d7d]
          tracking-[0.12px] leading-[1.15] whitespace-nowrap
          no-underline transition-colors hover:text-[#bfbfbf];
-}
-
-.r-navbar__cta {
-  @apply font-mono font-normal text-[12px] text-white uppercase
-         whitespace-nowrap leading-5
-         bg-[#e55a37] rounded-[999px]
-         px-[18px] py-[10px]
-         border-t border-l border-r border-[#eeaf9f]
-         shadow-[0px_10px_40px_0px_#592a1f]
-         cursor-pointer transition-opacity hover:opacity-90;
 }
 </style>
