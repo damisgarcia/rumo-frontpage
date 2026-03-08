@@ -8,8 +8,8 @@
       <div class="r-navbar__brand">
         <slot name="brand">
           <a href="/" class="r-navbar__logo">
-            <img
-              src="https://www.figma.com/api/mcp/asset/0f7dc73c-a553-476e-8dba-47251e5c93af"
+            <NuxtImg
+              src="/images/logo-rumo.png"
               alt="Rumo"
               width="140"
               height="37"
@@ -69,10 +69,6 @@
 
 .r-navbar__logo {
   @apply block h-[37px] w-[139.895px];
-}
-
-.r-navbar__logo img {
-  @apply h-full w-full object-contain;
 }
 
 .r-navbar__start {

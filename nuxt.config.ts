@@ -2,7 +2,7 @@
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineNuxtConfig({
-  modules: ['@nuxt/content', '@nuxt/fonts', '@nuxt/icon', 'shadcn-nuxt'],
+  modules: ['@nuxt/content', '@nuxt/fonts', '@nuxt/icon', '@nuxt/image', 'shadcn-nuxt'],
   devtools: { enabled: true },
   compatibilityDate: '2024-04-03',
   devServer: {

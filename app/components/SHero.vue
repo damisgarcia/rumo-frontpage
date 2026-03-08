@@ -6,17 +6,21 @@
 
       <!-- Phone mockup — absoluto, centralizado -->
       <div class="s-hero__phone">
-        <img
+        <NuxtImg
           class="s-hero__phone-body"
-          src="https://www.figma.com/api/mcp/asset/ff7282ee-c534-4eb5-af39-6ed8febc3702"
+          src="/images/hero-phone-body.png"
           alt=""
           aria-hidden="true"
+          width="280"
+          height="570"
         />
         <div class="s-hero__phone-screen">
-          <img
+          <NuxtImg
             class="s-hero__phone-screenshot"
-            src="https://www.figma.com/api/mcp/asset/11380ffb-7b9d-4d26-9ab9-2f8e573a64da"
+            src="/images/hero-phone-screenshot.png"
             alt="App Rumo"
+            width="252"
+            height="545"
           />
         </div>
       </div>
@@ -28,11 +32,13 @@
           <h1 class="s-hero__heading">
             Pare de torcer para o time vender e comece a governar o resultado!
           </h1>
-          <img
+          <NuxtImg
             class="s-hero__heading-deco"
-            src="https://www.figma.com/api/mcp/asset/33762e75-6c3e-42f6-90db-8107e7a26802"
+            src="/images/hero-heading-deco.svg"
             alt=""
             aria-hidden="true"
+            width="113"
+            height="37"
           />
         </div>
       </div>
@@ -50,9 +56,9 @@
         <div class="s-hero__platforms">
           <span class="s-hero__platforms-label">Plataformas disponíveis:</span>
           <div class="s-hero__platforms-icons">
-            <img class="s-hero__platform-icon" src="https://www.figma.com/api/mcp/asset/5c05ba0d-d75d-4303-bedc-aa09627fe9ed" alt="iOS" width="24" height="24" />
-            <img class="s-hero__platform-icon" src="https://www.figma.com/api/mcp/asset/e91fbcef-07fe-41d0-ba4a-0bbd4871b89d" alt="Web" width="24" height="24" />
-            <img class="s-hero__platform-icon" src="https://www.figma.com/api/mcp/asset/382f5f74-d94a-4714-99a8-a15274a34f2b" alt="Android" width="24" height="24" />
+            <NuxtImg class="s-hero__platform-icon" src="/images/icon-ios.png" alt="iOS" width="24" height="24" />
+            <NuxtImg class="s-hero__platform-icon" src="/images/icon-web.png" alt="Web" width="24" height="24" />
+            <NuxtImg class="s-hero__platform-icon" src="/images/icon-android.png" alt="Android" width="24" height="24" />
           </div>
         </div>
       </div>
