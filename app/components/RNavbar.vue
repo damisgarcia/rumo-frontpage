@@ -31,6 +31,8 @@
 </template>
 
 <style scoped>
+@reference "~/assets/css/main.css";
+
 .r-navbar {
   @apply w-full flex items-center justify-center bg-[#111111] border-b border-[#292929];
 }
