@@ -34,17 +34,17 @@
 @reference "~/assets/css/main.css";
 
 .r-navbar {
-  @apply w-full flex items-center justify-center bg-[#111111] border-b border-[#292929];
+  @apply w-full flex items-center justify-center bg-page-bg border-b border-page-border;
 }
 
 .r-navbar__container {
   @apply relative flex flex-1 items-center justify-between
          max-w-[1216px] px-8 py-6
-         border-l border-r border-[#292929];
+         border-l border-r border-page-border;
 }
 
 .r-navbar__dot {
-  @apply absolute bottom-[-3px] size-[5px] bg-[#565656];
+  @apply absolute bottom-[-3px] size-[5px] bg-text-subtle;
 }
 
 .r-navbar__dot--left  { @apply left-[-3px]; }
@@ -67,8 +67,8 @@
 }
 
 .r-navbar__link {
-  @apply font-sans font-normal text-[12px] text-[#7d7d7d]
+  @apply font-sans font-normal text-[12px] text-text-muted
          tracking-[0.12px] leading-[1.15] whitespace-nowrap
-         no-underline transition-colors hover:text-[#bfbfbf];
+         no-underline transition-colors hover:text-text-body;
 }
 </style>

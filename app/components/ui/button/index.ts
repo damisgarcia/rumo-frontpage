@@ -19,7 +19,7 @@ export const buttonVariants = cva(
         ghost:
           "hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50",
         link: "text-primary underline-offset-4 hover:underline",
-        cta: "font-mono font-normal text-xs text-white uppercase tracking-[0.12px] bg-brand-orange rounded-[999px] px-[18px] py-[10px] border-t border-l border-r border-[#eeaf9f] shadow-[0px_10px_40px_0px_#592a1f] hover:opacity-90",
+        cta: "font-mono font-normal text-xs text-white uppercase tracking-[0.12px] bg-primary rounded-[999px] px-[18px] py-[10px] border-t border-l border-r border-primary-border shadow-[var(--shadow-primary-glow)] hover:bg-primary-dark transition-colors",
       },
       size: {
         "default": "h-9 px-4 py-2 has-[>svg]:px-3",
