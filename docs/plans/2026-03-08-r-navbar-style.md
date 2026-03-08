@@ -1,3 +1,41 @@
+# RNavbar Style Implementation Plan
+
+> **For Claude:** REQUIRED SUB-SKILL: Use superpowers:executing-plans to implement this plan task-by-task.
+
+**Goal:** Estilizar o componente RNavbar de acordo com o design do Figma usando BEM + @apply.
+
+**Architecture:** Estilos em `<style scoped>` com nomenclatura BEM. Classes `.r-navbar*` mapeiam 1:1 para os elementos do Figma. Logo usa asset temporário do Figma — precisará ser substituído por arquivo definitivo.
+
+**Tech Stack:** Nuxt 4, Vue 3, @nuxtjs/tailwindcss (Tailwind v3), BEM + @apply
+
+---
+
+### Referência Figma
+
+Logo URL (expira em 7 dias): `https://www.figma.com/api/mcp/asset/0f7dc73c-a553-476e-8dba-47251e5c93af`
+
+| Elemento | Valores |
+|---|---|
+| Nav bg | `#111111` |
+| Border | `#292929` |
+| Dots | `#565656`, `5×5px` |
+| Logo | `139.895×37px` |
+| Links | Inter Regular 12px, `#7d7d7d`, gap 16px, tracking 0.12px |
+| CTA bg | `#e55a37` |
+| CTA border | `#eeaf9f` (left, right, top) |
+| CTA shadow | `0px 10px 40px 0px #592a1f` |
+| CTA text | JetBrains Mono 12px uppercase branco |
+
+---
+
+### Task 1: Reescrever RNavbar.vue
+
+**Files:**
+- Modify: `app/components/RNavbar.vue`
+
+**Step 1: Substituir conteúdo do componente**
+
+```vue
 <template>
   <nav class="r-navbar">
     <div class="r-navbar__container">
@@ -80,3 +118,13 @@
          cursor-pointer transition-opacity hover:opacity-90;
 }
 </style>
+```
+
+---
+
+### Task 2: Commit
+
+```bash
+git add app/components/RNavbar.vue docs/plans/2026-03-08-r-navbar-style.md
+git commit -m "feat: estilizar RNavbar de acordo com Figma (BEM + @apply)"
+```
