@@ -149,6 +149,39 @@ Todos os tokens estão em `app/assets/css/main.css` dentro do bloco `@theme`.
 
 4. **shadcn com variantes** — para customizar um componente shadcn, adicione uma variante via `cva` no `index.ts`. Nunca sobrescreva as classes base do shadcn diretamente.
 
+### Imagens e Ícones
+
+**Imagens** (fotos, ilustrações, mockups) — usar sempre `<NuxtImg>`:
+```vue
+<NuxtImg src="/images/hero-phone-body.png" alt="..." width="280" height="570" />
+```
+- Assets ficam em `public/images/`
+- Sempre informar `width` e `height`
+- Nunca usar `<img>` diretamente
+
+**Ícones** — criar componente Vue em `app/components/icons/`:
+- Nome do arquivo: PascalCase descritivo, ex: `IconEyeOpen.vue`, `IconArrowRight.vue`
+- Copiar o SVG do Figma e colocar no `<template>`
+- **Obrigatório:** substituir todas as cores hardcoded (`fill`, `stroke`) por `currentColor`
+- O componente herda a cor do pai via CSS `color`
+
+```vue
+<!-- app/components/icons/IconEyeOpen.vue -->
+<template>
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M..." stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+    <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.5"/>
+  </svg>
+</template>
+```
+
+Uso:
+```vue
+<!-- cor herdada do contexto -->
+<IconEyeOpen class="text-primary" />
+<IconEyeOpen class="text-text-muted size-5" />
+```
+
 ---
 
 ## Histórico de Decisões
@@ -165,3 +198,5 @@ Todos os tokens estão em `app/assets/css/main.css` dentro do bloco `@theme`.
 | 2026-03-08 | `--color-primary` = `#E55A37` (laranja Figma Orange/9) — cor principal do projeto |
 | 2026-03-08 | Escala de cinza `gray-1` a `gray-12` baseada nos tokens do Figma |
 | 2026-03-08 | Hexadecimais hardcoded proibidos — usar sempre tokens de `app/assets/css/main.css` |
+| 2026-03-08 | `@nuxt/image` instalado — usar `<NuxtImg>` para todas as imagens |
+| 2026-03-08 | Ícones como componentes Vue em `app/components/icons/` com `currentColor` |
