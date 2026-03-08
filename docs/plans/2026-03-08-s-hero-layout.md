@@ -1,3 +1,36 @@
+# SHero Layout Implementation Plan
+
+> **For Claude:** REQUIRED SUB-SKILL: Use superpowers:executing-plans to implement this plan task-by-task.
+
+**Goal:** Implementar o layout do SHero conforme Figma — phone mockup central, colunas esquerda/direita, dot grid background, BEM + @apply.
+
+**Architecture:** Componente Vue com `<style scoped>` + BEM + `@apply`. Assets temporários do Figma via URL (expiram em 7 dias). Sem lógica — layout puro.
+
+**Tech Stack:** Nuxt 4, Vue 3, Tailwind v4 via @tailwindcss/vite, tokens de `app/assets/css/main.css`
+
+---
+
+### Assets Figma (URLs temporárias — substituir por assets definitivos)
+
+| Asset | URL |
+|---|---|
+| iPhone Body | `https://www.figma.com/api/mcp/asset/ff7282ee-c534-4eb5-af39-6ed8febc3702` |
+| Screen mask | `https://www.figma.com/api/mcp/asset/c32499c6-5e8d-41b5-8ff9-5c3e52a61da4` |
+| App screenshot | `https://www.figma.com/api/mcp/asset/11380ffb-7b9d-4d26-9ab9-2f8e573a64da` |
+| Base wallpaper | `https://www.figma.com/api/mcp/asset/0e21013e-46d7-4be4-9a71-067c0063f28e` |
+| SVG decorativo (heading) | `https://www.figma.com/api/mcp/asset/33762e75-6c3e-42f6-90db-8107e7a26802` |
+| Ícone Apple | `https://www.figma.com/api/mcp/asset/5c05ba0d-d75d-4303-bedc-aa09627fe9ed` |
+| Ícone Web | `https://www.figma.com/api/mcp/asset/e91fbcef-07fe-41d0-ba4a-0bbd4871b89d` |
+| Ícone Android | `https://www.figma.com/api/mcp/asset/382f5f74-d94a-4714-99a8-a15274a34f2b` |
+
+---
+
+### Task 1: Reescrever SHero.vue
+
+**Files:**
+- Modify: `app/components/SHero.vue`
+
+```vue
 <template>
   <section class="s-hero">
     <div class="s-hero__container">
@@ -86,7 +119,8 @@
 
 /* ── Phone mockup ───────────────────────────────────── */
 .s-hero__phone {
-  @apply absolute left-1/2 -translate-x-1/2 top-16 w-[280px] h-[570px];
+  @apply absolute left-1/2 -translate-x-1/2 top-16
+         w-[280px] h-[570px];
   filter: drop-shadow(0px 10px 40px var(--color-primary-shadow));
 }
 
@@ -144,11 +178,13 @@
 
 /* ── Plataformas ────────────────────────────────────── */
 .s-hero__platforms {
-  @apply flex items-center gap-[10px] border-l border-text-muted pl-[10px];
+  @apply flex items-center gap-[10px]
+         border-l border-text-muted pl-[10px];
 }
 
 .s-hero__platforms-label {
-  @apply font-sans font-normal text-xs text-text-muted tracking-[0.12px] whitespace-nowrap;
+  @apply font-sans font-normal text-xs text-text-muted
+         tracking-[0.12px] whitespace-nowrap;
 }
 
 .s-hero__platforms-icons {
@@ -159,3 +195,13 @@
   @apply size-6 object-contain;
 }
 </style>
+```
+
+---
+
+### Task 2: Commit
+
+```bash
+git add app/components/SHero.vue docs/plans/2026-03-08-s-hero-layout.md
+git commit -m "feat: implementar layout SHero conforme Figma (BEM + @apply)"
+```
