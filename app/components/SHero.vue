@@ -32,14 +32,7 @@
           <h1 class="s-hero__heading">
             Pare de torcer para o time vender e comece a governar o resultado!
           </h1>
-          <NuxtImg
-            class="s-hero__heading-deco"
-            src="/images/hero-heading-deco.svg"
-            alt=""
-            aria-hidden="true"
-            width="113"
-            height="37"
-          />
+          <IconHeadingDeco class="s-hero__heading-deco text-primary" aria-hidden="true" />
         </div>
       </div>
 
@@ -56,9 +49,9 @@
         <div class="s-hero__platforms">
           <span class="s-hero__platforms-label">Plataformas disponíveis:</span>
           <div class="s-hero__platforms-icons">
-            <NuxtImg class="s-hero__platform-icon" src="/images/icon-ios.png" alt="iOS" width="24" height="24" />
-            <NuxtImg class="s-hero__platform-icon" src="/images/icon-web.png" alt="Web" width="24" height="24" />
-            <NuxtImg class="s-hero__platform-icon" src="/images/icon-android.png" alt="Android" width="24" height="24" />
+            <IconApple class="s-hero__platform-icon" aria-label="iOS" />
+            <IconWeb class="s-hero__platform-icon" aria-label="Web" />
+            <IconAndroid class="s-hero__platform-icon" aria-label="Android" />
           </div>
         </div>
       </div>
@@ -162,6 +155,6 @@
 }
 
 .s-hero__platform-icon {
-  @apply size-6 object-contain;
+  @apply size-6 text-text-muted;
 }
 </style>

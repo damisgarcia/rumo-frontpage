@@ -3,6 +3,10 @@ import tailwindcss from '@tailwindcss/vite'
 
 export default defineNuxtConfig({
   modules: ['@nuxt/content', '@nuxt/fonts', '@nuxt/icon', '@nuxt/image', 'shadcn-nuxt'],
+  components: [
+    { path: '~/components', pathPrefix: false },
+    { path: '~/components/icons', pathPrefix: false },
+  ],
   devtools: { enabled: true },
   compatibilityDate: '2024-04-03',
   devServer: {
