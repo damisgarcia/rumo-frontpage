@@ -4,27 +4,40 @@
       <span class="r-navbar__dot r-navbar__dot--left" />
       <span class="r-navbar__dot r-navbar__dot--right" />
 
-      <a href="/" class="r-navbar__logo">
-        <img
-          src="https://www.figma.com/api/mcp/asset/0f7dc73c-a553-476e-8dba-47251e5c93af"
-          alt="Rumo"
-          width="140"
-          height="37"
-        />
-      </a>
+      <!-- brand: logo / identidade -->
+      <div class="r-navbar__brand">
+        <slot name="brand">
+          <a href="/" class="r-navbar__logo">
+            <img
+              src="https://www.figma.com/api/mcp/asset/0f7dc73c-a553-476e-8dba-47251e5c93af"
+              alt="Rumo"
+              width="140"
+              height="37"
+            />
+          </a>
+        </slot>
+      </div>
 
-      <div class="r-navbar__actions">
-        <ul class="r-navbar__nav">
-          <li><a href="#o-rumo" class="r-navbar__link">O Rumo</a></li>
-          <li><a href="#funcionalidades" class="r-navbar__link">Funcionalidades</a></li>
-          <li><a href="#performance" class="r-navbar__link">Performance</a></li>
-          <li><a href="#depoimentos" class="r-navbar__link">Depoimentos</a></li>
-          <li><a href="#planos" class="r-navbar__link">Ver Planos</a></li>
-        </ul>
+      <!-- start: navegação principal -->
+      <div class="r-navbar__start">
+        <slot name="start">
+          <ul class="r-navbar__nav">
+            <li><a href="#o-rumo" class="r-navbar__link">O Rumo</a></li>
+            <li><a href="#funcionalidades" class="r-navbar__link">Funcionalidades</a></li>
+            <li><a href="#performance" class="r-navbar__link">Performance</a></li>
+            <li><a href="#depoimentos" class="r-navbar__link">Depoimentos</a></li>
+            <li><a href="#planos" class="r-navbar__link">Ver Planos</a></li>
+          </ul>
+        </slot>
+      </div>
 
-        <Button variant="cta">
-          Solicitar demonstração
-        </Button>
+      <!-- end: ação principal -->
+      <div class="r-navbar__end">
+        <slot name="end">
+          <Button variant="cta">
+            Solicitar demonstração
+          </Button>
+        </slot>
       </div>
     </div>
   </nav>
@@ -50,16 +63,20 @@
 .r-navbar__dot--left  { @apply left-[-3px]; }
 .r-navbar__dot--right { @apply right-[-3px]; }
 
+.r-navbar__brand {
+  @apply shrink-0;
+}
+
 .r-navbar__logo {
-  @apply shrink-0 block h-[37px] w-[139.895px];
+  @apply block h-[37px] w-[139.895px];
 }
 
 .r-navbar__logo img {
   @apply h-full w-full object-contain;
 }
 
-.r-navbar__actions {
-  @apply flex items-center gap-6;
+.r-navbar__start {
+  @apply flex-1 flex items-center justify-center;
 }
 
 .r-navbar__nav {
@@ -70,5 +87,9 @@
   @apply font-sans font-normal text-[12px] text-text-muted
          tracking-[0.12px] leading-[1.15] whitespace-nowrap
          no-underline transition-colors hover:text-text-body;
+}
+
+.r-navbar__end {
+  @apply shrink-0 flex items-center;
 }
 </style>
