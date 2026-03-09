@@ -4,9 +4,6 @@
 ::s-hero
 ::
 
-::s-partners
-::
-
 ::s-ecosystem
 ::
 
@@ -26,6 +23,9 @@
 ::
 
 ::s-plans
+::
+
+::s-faq
 ::
 
 ::r-footer
