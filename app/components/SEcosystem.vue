@@ -85,6 +85,21 @@
 
         </div>
       </div>
+
+      <!-- CTA Row -->
+      <div class="s-ecosystem__cta-row">
+        <p class="s-ecosystem__cta-text">
+          O Rumo <span class="s-ecosystem__cta-text--normal">implementa o que ERP e CRM não conseguem: </span>
+          <span class="s-ecosystem__cta-text--accent">governança de performance comercial.</span>
+        </p>
+        <div class="s-ecosystem__cta-box">
+          <span class="s-ecosystem__cta-box-dot s-ecosystem__cta-box-dot--tl" />
+          <span class="s-ecosystem__cta-box-dot s-ecosystem__cta-box-dot--tr" />
+          <span class="s-ecosystem__cta-box-dot s-ecosystem__cta-box-dot--bl" />
+          <span class="s-ecosystem__cta-box-dot s-ecosystem__cta-box-dot--br" />
+          <button class="s-ecosystem__cta-btn">Solicitar demonstração</button>
+        </div>
+      </div>
     </div>
   </section>
 </template>
@@ -149,6 +164,44 @@ const chartBars = [
 
 .s-ecosystem__title-accent {
   @apply text-primary;
+}
+
+/* ── CTA Row ─────────────────────────────────────────────── */
+.s-ecosystem__cta-row {
+  @apply flex items-center justify-between w-full py-12;
+}
+
+.s-ecosystem__cta-text {
+  @apply font-tight font-medium text-2xl leading-[1.15] tracking-[0.24px]
+         text-text-primary w-[695px] whitespace-pre-wrap;
+}
+
+.s-ecosystem__cta-text--normal {
+  @apply text-text-primary;
+}
+
+.s-ecosystem__cta-text--accent {
+  @apply text-primary block;
+}
+
+.s-ecosystem__cta-box {
+  @apply relative bg-[#292929] border border-text-subtle p-3 flex flex-col gap-[10px] items-start shrink-0;
+}
+
+.s-ecosystem__cta-box-dot {
+  @apply absolute size-[5px] bg-text-subtle;
+}
+.s-ecosystem__cta-box-dot--tl { @apply left-[-3px] top-[-3px]; }
+.s-ecosystem__cta-box-dot--tr { @apply right-[-3px] top-[-3px]; }
+.s-ecosystem__cta-box-dot--bl { @apply left-[-3px] bottom-[-3px]; }
+.s-ecosystem__cta-box-dot--br { @apply right-[-3px] bottom-[-3px]; }
+
+.s-ecosystem__cta-btn {
+  @apply bg-primary border-t border-l border-r border-primary-border
+         rounded-full px-[18px] py-[10px]
+         font-mono font-normal text-xs text-white uppercase tracking-[0.12px]
+         whitespace-nowrap w-full text-center cursor-pointer;
+  box-shadow: var(--shadow-primary-glow);
 }
 
 /* ── Cards ───────────────────────────────────────────────── */
