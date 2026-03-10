@@ -30,11 +30,8 @@
                 <IconChevronDown class="s-managers__accordion-icon" />
               </template>
             </AccordionTrigger>
-            <AccordionContent
-              v-if="item.body"
-              class="s-managers__accordion-content"
-            >
-              {{ item.body }}
+            <AccordionContent class="s-managers__accordion-content">
+              <span v-if="item.body">{{ item.body }}</span>
             </AccordionContent>
           </AccordionItem>
         </Accordion>
@@ -187,7 +184,7 @@ const accordionItems = [
 }
 
 .s-managers__card-logo {
-  @apply h-6 w-auto;
+  @apply h-6;
 }
 
 .s-managers__card-badge {
