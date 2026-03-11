@@ -1,5 +1,5 @@
 <template>
-  <section class="s-system">
+  <section id="performance" class="s-system">
     <div class="s-system__container">
 
       <!-- Header -->

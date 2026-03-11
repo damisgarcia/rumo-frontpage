@@ -1,5 +1,5 @@
 <template>
-  <section class="s-testimonials">
+  <section id="depoimentos" class="s-testimonials">
     <div class="s-testimonials__container">
 
       <!-- Left Panel -->

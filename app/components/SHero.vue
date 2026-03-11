@@ -1,5 +1,5 @@
 <template>
-  <section class="s-hero">
+  <section id="o-rumo" class="s-hero">
     <div class="s-hero__container">
       <span class="s-hero__dot s-hero__dot--left" />
       <span class="s-hero__dot s-hero__dot--right" />

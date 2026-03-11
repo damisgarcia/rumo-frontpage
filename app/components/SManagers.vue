@@ -1,5 +1,5 @@
 <template>
-  <section class="s-managers">
+  <section id="funcionalidades" class="s-managers">
     <div class="s-managers__container">
 
       <!-- Coluna esquerda -->

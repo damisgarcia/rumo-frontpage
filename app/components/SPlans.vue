@@ -1,5 +1,5 @@
 <template>
-  <section class="s-plans">
+  <section id="planos" class="s-plans">
     <div class="s-plans__container">
 
       <!-- Header -->
