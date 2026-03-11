@@ -90,11 +90,7 @@ const cards = [
 
 /* ── Card accent bar (vertical, primary, left edge) ─────── */
 .s-system__card-accent {
-  @apply absolute bg-primary rounded-full;
-  width: 3px;
-  height: 40px;
-  left: -2px;
-  top: 25px;
+  @apply absolute bg-primary rounded-full w-[3px] h-10 left-[-2px] top-[25px];
 }
 
 /* ── Card text ───────────────────────────────────────────── */
