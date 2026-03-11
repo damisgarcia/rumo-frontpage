@@ -63,6 +63,7 @@ frontpage/
 5. **Brainstorm antes de implementar** — use `superpowers:brainstorming` para qualquer feature nova
 6. **Plano antes de código** — use `superpowers:writing-plans` após o brainstorm
 7. **Atualize este arquivo** ao final de cada sessão ou tarefa concluída
+8. **Implementação via Figma** — sempre que for implementar um layout ou componente a partir do Figma, use o skill `/figma:implement-design` antes de qualquer ação. Forneça a URL do nó Figma como argumento.
 
 ---
 
@@ -99,6 +100,12 @@ Todos os tokens estão em `app/assets/css/main.css` dentro do bloco `@theme`.
 | `primary-subtle` | `--color-primary-subtle` | `#F3ECEA` | fundo sutil |
 | `primary-border` | `--color-primary-border` | `#EEAF9F` | borda do CTA |
 | `primary-shadow` | `--color-primary-shadow` | `#592A1F` | cor do glow |
+
+### Cor de Suporte (Figma: Support/*)
+
+| Token Tailwind | CSS Var | Hex | Uso |
+|---|---|---|---|
+| `support` | `--color-support` | `#35B177` | sucesso, checkmarks |
 
 ### Aliases Semânticos
 
@@ -200,3 +207,5 @@ Uso:
 | 2026-03-08 | Hexadecimais hardcoded proibidos — usar sempre tokens de `app/assets/css/main.css` |
 | 2026-03-08 | `@nuxt/image` instalado — usar `<NuxtImg>` para todas as imagens |
 | 2026-03-08 | Ícones como componentes Vue em `app/components/icons/` com `currentColor` |
+| 2026-03-10 | Skill `/figma:implement-design` obrigatório para toda implementação via Figma MCP |
+| 2026-03-10 | Token `--color-support` (#35B177) adicionado — Figma Support/5, usado em checkmarks |
