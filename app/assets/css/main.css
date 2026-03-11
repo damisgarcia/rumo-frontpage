@@ -203,9 +203,9 @@
 ───────────────────────────────────────────────────────────── */
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 88px; /* navbar height + breathing room */
+  scroll-padding-top: 64px; /* navbar ~62px + breathing room */
 }
 
 body {
-  padding-top: 80px; /* compensate fixed navbar height */
+  padding-top: 64px; /* compensate fixed navbar height */
 }
