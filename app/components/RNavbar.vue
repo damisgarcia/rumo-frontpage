@@ -1,5 +1,11 @@
 <template>
-  <nav class="r-navbar">
+  <nav
+    class="r-navbar"
+    :class="{
+      'r-navbar--hidden': isHidden,
+      'r-navbar--scrolled': isScrolled,
+    }"
+  >
     <div class="r-navbar__container">
       <span class="r-navbar__dot r-navbar__dot--left" />
       <span class="r-navbar__dot r-navbar__dot--right" />
@@ -43,11 +49,48 @@
   </nav>
 </template>
 
+<script setup lang="ts">
+const isHidden = ref(false)
+const isScrolled = ref(false)
+let lastScrollY = 0
+
+function onScroll() {
+  const currentScrollY = window.scrollY
+  const delta = currentScrollY - lastScrollY
+
+  if (Math.abs(delta) > 10) {
+    isHidden.value = delta > 0 && currentScrollY > 80
+    lastScrollY = currentScrollY
+  }
+
+  isScrolled.value = currentScrollY > 10
+}
+
+onMounted(() => {
+  window.addEventListener('scroll', onScroll, { passive: true })
+})
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', onScroll)
+})
+</script>
+
 <style scoped>
 @reference "~/assets/css/main.css";
 
 .r-navbar {
-  @apply w-full flex items-center justify-center bg-page-bg border-b border-page-border;
+  @apply fixed top-0 left-0 right-0 z-50
+         w-full flex items-center justify-center
+         bg-page-bg border-b border-page-border
+         transition-transform duration-300 ease-in-out;
+}
+
+.r-navbar--hidden {
+  @apply -translate-y-full;
+}
+
+.r-navbar--scrolled {
+  @apply bg-page-bg/80 backdrop-blur-md border-page-border/60;
 }
 
 .r-navbar__container {
