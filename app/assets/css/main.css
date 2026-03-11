@@ -197,3 +197,15 @@
     @apply font-normal text-xs text-text-muted tracking-[0.12px];
   }
 }
+
+/* ─────────────────────────────────────────────────────────────
+   Layout base
+───────────────────────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 88px; /* navbar height + breathing room */
+}
+
+body {
+  padding-top: 80px; /* compensate fixed navbar height */
+}
