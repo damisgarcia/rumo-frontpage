@@ -31,6 +31,9 @@
   --color-primary-border:  #EEAF9F;   /* borda do CTA */
   --color-primary-shadow:  #592A1F;   /* cor do glow do CTA */
 
+  /* ── Suporte / Feedback (Figma: Support/*) ─────────────── */
+  --color-support:  #35B177;   /* Support/5 — sucesso, checkmarks */
+
   /* ── Aliases semânticos ─────────────────────────────────── */
   --color-page-bg:      var(--color-gray-12);
   --color-page-border:  #292929;
