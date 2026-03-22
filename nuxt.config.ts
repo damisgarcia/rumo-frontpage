@@ -27,4 +27,7 @@ export default defineNuxtConfig({
     prefix: '',
     componentDir: './app/components/ui',
   },
+  nitro: {
+    preset: 'vercel',
+  },
 })
