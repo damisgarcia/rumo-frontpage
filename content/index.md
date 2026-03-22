@@ -4,23 +4,23 @@
 ::s-hero
 ::
 
-::s-ecosystem
-::
+<!-- ::s-ecosystem
+:: -->
 
-::s-ecosystem-action
-::
+<!-- ::s-ecosystem-action
+:: -->
 
-::s-managers
-::
+<!-- ::s-managers
+:: -->
 
-::s-sellers
+<!-- ::s-sellers
 ::
 
 ::s-system
 ::
 
 ::s-testimonials
-::
+:: -->
 
 :r-separator
 

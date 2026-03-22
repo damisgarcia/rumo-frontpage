@@ -79,7 +79,7 @@ const standardCards = [
     slug: 'ranking',
     title: 'Ranking Competitivo',
     body: 'Visibilidade do desempenho para estimular competitividade saudável e senso de urgência. Todos sabem quem lidera, quem está atrás e quem precisa reagir agora.',
-    hasImage: false,
+    hasImage: true,
   },
   {
     slug: 'meta',
@@ -103,7 +103,7 @@ const standardCards = [
     slug: 'notificacoes',
     title: 'Central de Notificações',
     body: 'Alertas de inatividade e estímulos de performance via push. Notificações diretas, sem ruído ou distrações, focadas em manter o ritmo de execução da equipe.',
-    hasImage: false,
+    hasImage: true,
   },
   {
     slug: 'feed',
@@ -125,13 +125,13 @@ const wideCard = {
 
 /* ── Section ─────────────────────────────────────────────── */
 .s-sellers {
-  @apply w-full flex items-center justify-center bg-white border-t border-page-border;
+  @apply w-full flex flex-col items-center bg-gray-1 border-t border-page-border;
 }
 
 /* ── Container ───────────────────────────────────────────── */
 .s-sellers__container {
-  @apply relative flex flex-col flex-1 gap-12 items-start
-         max-w-[1216px] px-8 pt-[140px] pb-20;
+  @apply relative flex flex-col gap-12 items-start
+         w-full max-w-[1216px] pt-20 pb-20;
 }
 
 /* ── Header ──────────────────────────────────────────────── */
@@ -174,7 +174,7 @@ const wideCard = {
 
 /* Card largo: ocupa 2 colunas, layout horizontal */
 .s-sellers__card--wide {
-  @apply col-span-2 flex-row;
+  @apply col-span-2 flex-row gap-8;
 }
 
 /* ── Célula vazia ────────────────────────────────────────── */
@@ -206,7 +206,15 @@ const wideCard = {
 
 /* ── Card image ──────────────────────────────────────────── */
 .s-sellers__card-image {
-  @apply relative overflow-hidden shrink-0 h-[240px];
+  @apply relative overflow-hidden shrink-0 h-[240px] w-full;
+}
+
+/* Gradiente que faz a transição suave entre texto e imagem (conforme Figma) */
+.s-sellers__card-image::before {
+  content: '';
+  @apply absolute top-0 left-0 right-0 z-10 pointer-events-none;
+  height: 80px;
+  background: linear-gradient(to bottom, var(--color-gray-3), transparent);
 }
 
 .s-sellers__card-image--wide {
